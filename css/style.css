@@ -14,7 +14,7 @@
 }
 
 .clear {
-	clear: both;
+     clear: both;
 }
 
 /******************************************
@@ -22,21 +22,130 @@
 /*******************************************/
 
 body {
-
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: beige;
+     background-color: black;
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
-}
-
-footer {
-
+header, footer {
+     padding-top: 40px;
+     padding-bottom: 40px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+section {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+}
+
+img, iframe {
+     height: 500px;
+     width: 900px;
+     margin: 10px 50px 10px 50px;
+     border: 2px rgba(137, 43, 226, 0.362) solid;
+     box-shadow: 3px 3px rgba(137, 43, 226, 0.35), -1em 0 .4em rgba(25, 84, 129, 0.645);
+}
+
+.remove{
+     display: none;
+}
+
+div{
+     width: auto;
+     display: flex;
+     flex-direction: row;
+}
+a{
+     margin-left: 30px;
+     margin-right: 30px;
+}
+
+footer{
+     background-image: url('https://i.pinimg.com/originals/0d/e4/c7/0de4c73fb819b1e74a555bef123aca6b.jpg');
+     background-size: cover;
+}
+header{
+     background-image: url('https://www.dc.com/sites/default/files/Char_Gallery_Batman_DTC1018_6053f2162bdf03.97426416.jpg');
+          background-color: black;
+          background-size: cover;
+          font-family: 'Bangers';
+          font-size: 4rem;
+
+}
+h3{
+     margin: 10px 50px 10px 50px;
+     padding: 10px 10px 10px 10px;
+     border: 2px rgba(43, 226, 177, 0.362) solid;
+     box-shadow: 3px 3px rgba(70, 199, 141, 0.693), -1em 0 .4em rgba(25, 129, 87, 0.645);
+}
+p{
+     font-family: 'Press Start 2P';
+     font-size: 2rem;
+}
+section > button{
+     font-family: 'Press Start 2P';
+     height: 3rem;
+     width: 7rem;
+     margin: 20px 0 20px 0;
+}
+input{
+     font-family: 'Press Start 2P';
+     height: 50px;
+}
+
+div a i{
+     color:beige;
+}
+
+   /* On larger screens, please keep the normal layout, but everything should be light blue */
+   @media all and (min-width: 1024px){
+
+   }
+   /* On laptop, please keep the normal layout, but everything should be light green */
+   @media all and (min-width: 920px){
+
+   }
+
+   /* On tablet, please make the sections in main stack  */
+   @media all and (max-width: 920px){
+     img, iframe {
+          height: 400px;
+          width: 650px;
+     }
+     header{
+          font-size: 3rem;
+     }
+     p{
+          font-size: 1.5rem;
+     }
+   }
+
+   /* On mobile, please make all sections stack  */
+@media all and (max-width: 500px){
+     img, iframe {
+          height: 250px;
+          width: 350px;
+     }
+     header{
+          font-size: 2rem;
+     }
+     p{
+          font-size: 1.5rem;
+     }
+   }
